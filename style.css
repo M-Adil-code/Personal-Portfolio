@@ -3,19 +3,41 @@
 	padding: 0px;
 	margin: 0px;
 }
+a{
+	text-decoration: none;
+}
 
 header{
-	background: rgba(0, 0, 0, 0.2);
+	    background: rgba(255, 255, 255, 0.25);
+	width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	height: 90px;
+	
 	padding: 2px 30px;
+	position: sticky;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	justify-content: center;
+}
+.mainicon{
+	position: fixed;
+	top: 10px;
+	left: 10px;
 }
 .container-fluid{
 	
 }
 header>ul{
 	padding-right: 4em;
+}
+.nav{
+	font-size: 20px;
+
+}
+.nav-bg{
+	justify-self: center;
 }
 .intro{
 	width: 50%;
@@ -163,8 +185,8 @@ header>ul{
 }
 .contact-card{
 	margin: auto;
-	background: wheat;
-	width: 350px;
+	
+	width: 400px;
 	padding: 20px 40px;
 	align-items: center;
 	border-radius: 8px;
@@ -174,7 +196,7 @@ header>ul{
 .contact-card a{
 	text-decoration: none;
 	color: black;
-	font-size: 20px;
+	font-size: 16px;
 }
 .contact-form span{
 	display: flex;
@@ -194,4 +216,43 @@ header>ul{
 .contact-form .btn{
 	width: auto;
 	margin: 30px auto;
+}
+
+@media (max-width:768px){
+	header{
+		justify-content: end;
+	}
+	.nav-bg{
+
+		width: 80%;
+		height: 80vh;
+		background: white;
+		position: fixed;
+		top: 1px;
+		right: -1000px;
+		padding: 80px 50px;
+		transition: all 0.3s linear;
+
+
+	}
+	.nav{
+		
+		flex-wrap: nowrap;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 30px;
+		align-items: start;
+
+
+	}
+	.cross{
+		font-size: 50px;
+		font-weight: 500;
+		color: rgba(0, 0, 0, 0.5);
+		cursor: pointer;
+		position: absolute;
+		top: 15px;
+		right: 20px;
+	}
 }
